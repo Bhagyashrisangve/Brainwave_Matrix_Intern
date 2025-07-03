@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Edit Product</h2>
+<form method="POST">
+  <input name="name" value="{{ product.name }}" required>
+  <input name="category" value="{{ product.category }}">
+  <input name="quantity" type="number" value="{{ product.quantity }}" required>
+  <input name="price" type="number" value="{{ product.price }}" step="0.01">
+  <input name="sku" value="{{ product.sku }}">
+  <input name="threshold" type="number" value="{{ product.threshold }}">
+  <button type="submit">Update</button>
+</form>
+{% endblock %}
